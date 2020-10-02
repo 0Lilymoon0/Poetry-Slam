@@ -35,3 +35,15 @@ poemList = infile.read().splitlines()
 lines_printed_random(poemList)
 infile.close
 print("\n")
+
+# Printing only even lines
+def lines_printed_custom(filename):
+  num_line = len(filename)
+  for i in range(1, num_line):
+    if i % 2 == 1:
+      print(str(i + 1) + " " + filename[i])
+  return []
+
+infile = open("poem.txt", "r")
+lines_printed_custom(infile.read().splitlines())
+infile.close
